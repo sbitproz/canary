@@ -7,11 +7,14 @@ function App() {
   const { ready } = useApiInterceptor();
 
   if (!ready) {
-    return null
+    return null;
   }
 
-  return <RouterProvider router={router} />;
-
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App;

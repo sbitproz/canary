@@ -5,4 +5,6 @@ export const spacings = {
   S4: 8,
   S5: 10,
   S6: 12,
+  S7: 16,
+  S8: 20,
 }

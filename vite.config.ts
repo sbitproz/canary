@@ -1,11 +1,19 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
+import svgr from 'vite-plugin-svgr';
 
 // eslint-disable-next-line no-empty-pattern
 export default ({}) => {
   return defineConfig({
-    plugins: [react({ jsxImportSource: "@emotion/react" })],
+    plugins: [
+      react({ jsxImportSource: "@emotion/react" }),
+      svgr({
+        svgrOptions: {
+          // svgr options
+        },
+      }),
+    ],
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src/"),

@@ -7,3 +7,11 @@ export const Button = styled(ButtonBase)`
   padding: 6.4px 40px;
   height: 40px;
 `;
+
+
+export const LargeButton = styled(ButtonBase)`
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  height: 55px;
+`;
