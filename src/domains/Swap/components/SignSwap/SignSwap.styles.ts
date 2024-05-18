@@ -14,12 +14,10 @@ export const SignSwapSteps = styled(Steps)`
 `;
 
 export const SignSwapActions = styled.div`
-  margin-top: 40px;
+  margin-top: 20px;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 `;
-
-export const TopSub = styled.div``;

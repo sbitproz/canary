@@ -1,5 +1,6 @@
 import { Button as ButtonBase } from 'antd';
 import styled from '@emotion/styled';
+import { colors } from '@/styles/colors';
 
 export const Button = styled(ButtonBase)`
   border-radius: 6px;
@@ -13,4 +14,5 @@ export const LargeButton = styled(ButtonBase)`
   font-size: 20px;
   font-weight: 500;
   height: 55px;
+  color: ${colors.white100};
 `;

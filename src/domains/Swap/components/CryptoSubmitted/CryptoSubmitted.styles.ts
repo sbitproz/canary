@@ -66,8 +66,6 @@ export const SignSwapActions = styled.div`
   align-items: flex-end;
 `;
 
-export const TopSub = styled.div``;
-
 export const BottomContainer = styled.div``;
 
 export const CryptoTitle = styled.div`

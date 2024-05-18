@@ -1,9 +1,10 @@
 import { Typography } from 'antd';
-import { SignSwapActions, SignSwapSteps, TopSub } from './SignSwap.styles';
+import { SignSwapActions, SignSwapSteps } from './SignSwap.styles';
 import { LargeButton } from '@/common/components/Button/Button.styles';
 import { Panel } from '@/common/components/Panel/Panel';
 import { useAppSelector } from '@/store/hooks';
 import { selectSwapCryptoSelector } from '@/store/selectors/swap.selectors';
+import { inputNumberFormatter } from '@/common/utils/numberFormater';
 
 const items = [
   {
@@ -28,16 +29,24 @@ export const SignSwap = ({ onClickSign }: SignSwapProps) => {
   return (
     <Panel
       topSection={
-        <TopSub>
-          Swapping {cryptoFromValue} {cryptoFrom?.value} for {cryptoToValue}{' '}
-          {cryptoTo?.value}
-        </TopSub>
+        <Typography.Title level={3} style={{ marginBottom: 0 }}>
+          Sign Swap
+        </Typography.Title>
       }
       bottomSection={
         <>
-          <div style={{ marginBottom: 50, textAlign: 'center' }}>
-            <Typography.Title level={3}>Almost there!</Typography.Title>
-            <Typography.Title level={4}>Follow these steps:</Typography.Title>
+          <div style={{ textAlign: 'center' }}>
+            <Typography.Title level={3} style={{ marginBottom: 30 }}>
+              Almost there!
+            </Typography.Title>
+            <Typography.Title level={4} style={{ marginBottom: 10 }}>
+              Swapping {inputNumberFormatter(cryptoFromValue)}{' '}
+              {cryptoFrom?.value} for {inputNumberFormatter(cryptoToValue)}{' '}
+              {cryptoTo?.value}
+            </Typography.Title>
+            <Typography.Title level={4} style={{ marginBottom: 30 }}>
+              Follow these steps:
+            </Typography.Title>
           </div>
           <SignSwapSteps current={1} labelPlacement="vertical" items={items} />
           <SignSwapActions>

@@ -6,7 +6,7 @@ export enum ThemeOptions {
   FUN = 'FUN',
 }
 
-export const standardBoxShadow = 'rgba(149, 157, 165, 0.2) 0px 8px 24px';
+export const standardBoxShadow = 'rgb(149 157 165 / 13%) -1px 6px 16px;';
 
 export const screen = {
   minWidth: 1100,
@@ -37,7 +37,6 @@ export const simpleTheme: ThemeConfig = {
     Menu: {
       colorBgContainer: simpleColors.primary100,
       colorText: colors.white100,
-      itemSelectedBg: 'red',
     },
     Layout: {
       headerBg: simpleColors.primary100,

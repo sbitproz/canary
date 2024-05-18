@@ -14,7 +14,9 @@ export const Header = styled(HeaderBase)`
 `;
 
 export const Footer = styled(FooterBase)`
-  background: ${colors.grey125};
+  background: ${({ theme }) => theme.colors.grey100};
+  color: ${({ theme }) => theme.colors.white100};
   border-bottom: 1px solid ${colors.grey187};
   display: flex;
+  justify-content: space-between;
 `;

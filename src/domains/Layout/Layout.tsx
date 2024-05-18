@@ -2,6 +2,7 @@ import { Image, Menu } from 'antd';
 import { BaseLayout, Footer, Header } from './Layout.styles';
 import { Outlet } from 'react-router-dom';
 import { spacings } from '@/styles/spacings';
+import { ExportOutlined } from '@ant-design/icons';
 
 const items = [
   { label: 'Swap', key: '1' },
@@ -30,7 +31,16 @@ export const Layout = () => {
         />
       </Header>
       <Outlet />
-      <Footer>Footer</Footer>
+      <Footer>
+        <div>Canary Protocol &#169; 2024</div>
+        <div>
+          <span style={{ marginRight: 20 }}>UI Mirrors: </span>
+          <span style={{ marginRight: 20 }}>
+            IPFS <ExportOutlined style={{ marginLeft: 5 }} />
+          </span>{' '}
+          <span>19542364</span>
+        </div>
+      </Footer>
     </BaseLayout>
   );
 };

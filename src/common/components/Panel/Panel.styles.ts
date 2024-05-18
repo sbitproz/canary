@@ -12,13 +12,17 @@ export const SignSwapContainer = styled.div`
 `;
 
 export const SignSwapTop = styled.div`
-  background-color: ${({ theme }) => theme.brandColors.primary140};
+  background-color: ${({ theme }) => theme.brandColors.primary100};
   width: 100%;
   text-align: center;
   display: flex;
   font-size: 20px;
-  font-weight: 600;
-  color: ${colors.grey120};
+  font-weight: 700;
+  h1,
+  h2,
+  h3 {
+    color: ${colors.white100};
+  }
   flex-direction: column;
   align-items: center;
   padding: 2.5rem;
@@ -32,7 +36,7 @@ export const SignSwapContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 4rem;
+  padding-top: 2.5rem;
 
   border: 1px solid ${colors.grey185};
   border-top: 0px;

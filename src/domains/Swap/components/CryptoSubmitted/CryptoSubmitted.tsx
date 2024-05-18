@@ -1,9 +1,5 @@
-import { List, Typography } from 'antd';
-import {
-  BottomContainer,
-  SignSwapActions,
-  TopSub,
-} from './CryptoSubmitted.styles';
+import { Button, List, Typography } from 'antd';
+import { BottomContainer, SignSwapActions } from './CryptoSubmitted.styles';
 import { LargeButton } from '@/common/components/Button/Button.styles';
 import { Panel } from '@/common/components/Panel/Panel';
 import { useCryptoSubmitted } from './useCryptoSubmitted';
@@ -14,28 +10,29 @@ export const CryptoSubmitted = () => {
 
   return (
     <Panel
-      topSection={<TopSub>Swap Complete</TopSub>}
+      topSection={
+        <Typography.Title level={3} style={{ marginBottom: 0 }}>
+          Order Submitted
+        </Typography.Title>
+      }
       bottomSection={
         <>
           <BottomContainer>
             <div
               style={{
-                gap: 10,
                 display: 'flex',
                 marginBottom: 20,
                 flexDirection: 'column',
                 alignItems: 'center',
               }}
             >
-              <Typography.Title level={3}>Order Submitted</Typography.Title>
               <Typography.Text>
-                <a
-                  href="https://www.blockchain.com/explorer"
-                  rel="noreferrer"
+                <Button
                   target="_blank"
+                  href="https://www.blockchain.com/explorer"
                 >
                   View on Explorer <ExportOutlined />
-                </a>
+                </Button>
               </Typography.Text>
             </div>
             <List
