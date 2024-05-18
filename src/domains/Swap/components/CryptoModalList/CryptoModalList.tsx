@@ -1,49 +1,12 @@
-import { CryptoCurrency, cryptos } from '@/common/constants/cryptos';
+import { CryptoCurrency } from '@/common/constants/cryptos';
 import { colors } from '@/styles/colors';
-import { spacings } from '@/styles/spacings';
-import { Flex, Image, Input, Modal } from 'antd';
+import { Input, Modal } from 'antd';
+import { CryptoElement } from './CryptoElement';
+import { useCryptoModalList } from './useCryptoModalList';
 
 const modalTitle = 'Select a token';
 
 const { Search } = Input;
-
-interface CryptoElementProps {
-  crypto: CryptoCurrency;
-  onClick: () => void;
-}
-
-const CryptoElement = ({ crypto, onClick }: CryptoElementProps) => {
-  return (
-    <Flex style={{ marginBottom: 10, cursor: 'pointer' }} onClick={onClick}>
-      <Image
-        src={crypto.image}
-        width={35}
-        wrapperStyle={{
-          marginRight: spacings.S6,
-          marginBottom: spacings.S6,
-        }}
-        style={{
-          borderRadius: 50,
-        }}
-      />
-      <div>
-        <div style={{ fontWeight: 600, lineHeight: '15px' }}>
-          {crypto.value}
-        </div>
-        <div
-          style={{
-            color: colors.grey150,
-            textTransform: 'uppercase',
-            fontSize: 12,
-            marginTop: 2,
-          }}
-        >
-          {crypto.description}
-        </div>
-      </div>
-    </Flex>
-  );
-};
 
 interface CryptoModalListProps {
   isCryptoModalOpen: boolean;
@@ -56,6 +19,8 @@ export const CryptoModalList = ({
   onSelectCrypto,
   onCancel,
 }: CryptoModalListProps) => {
+  const { cryptos, searchValue, setSearch } = useCryptoModalList();
+
   return (
     <Modal
       footer={[]}
@@ -71,6 +36,8 @@ export const CryptoModalList = ({
           marginBottom: 25,
           borderBottom: `1px solid  ${colors.grey187}`,
         }}
+        value={searchValue}
+        onChange={(e) => setSearch(e.target.value)}
       />
       <div style={{ height: 500, overflowY: 'auto' }}>
         {cryptos.map((crypto) => (
