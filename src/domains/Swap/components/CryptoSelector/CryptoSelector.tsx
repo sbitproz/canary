@@ -15,7 +15,7 @@ interface CryptoSelectorProps {
   label: string;
   selectedCurrency?: CryptoCurrency;
   onSelectedCurrency: (crypt: CryptoCurrency) => void;
-  onSetValue?: (value: number | null) => void;
+  onSetValue: (value: number | null) => void;
   value?: number;
 }
 
@@ -51,8 +51,7 @@ export const CryptoSelector = ({
           controls={false}
           value={value}
           onChange={(value) => {
-            console.log('value', value);
-            onSetValue && onSetValue(value as number);
+            onSetValue(value as number);
           }}
         />{' '}
         <CryptoButton
@@ -61,10 +60,12 @@ export const CryptoSelector = ({
         />
       </InputButtonContainer>
       <ConversionLabel>
-        {numberFormatter(
-          (value ?? 0) * (selectedCurrency?.conversionRate ?? 0),
-          5,
-        ) ?? ''}
+        {!!selectedCurrency && !!value && (
+          <>
+            &#36;
+            {numberFormatter((value ?? 0) * selectedCurrency.conversionRate, 5)}
+          </>
+        )}
       </ConversionLabel>
     </CryptoSelectorContainer>
   );

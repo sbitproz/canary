@@ -1,6 +1,6 @@
 import { createReducer } from '@reduxjs/toolkit';
 import { ThemeOptions } from '@/theme/theme.constants';
-import { CryptoCurrency } from '@/common/constants/cryptos';
+import { CryptoCurrency, ethereumCrypto } from '@/common/constants/cryptos';
 import {
   resetCryptoAction,
   setFromCryptoAction,
@@ -31,7 +31,7 @@ export enum SwapStage {
 }
 
 export const initialState = {
-  cryptoFrom: undefined,
+  cryptoFrom: ethereumCrypto,
   cryptoTo: undefined,
   theme: ThemeOptions.SIMPLE,
   swapStage: SwapStage.WALLET_UNCONECTED,
@@ -59,6 +59,8 @@ const swapReducer = createReducer(initialState, (builder) => {
   builder.addCase(resetCryptoAction, (state: SwapState) => {
     state.cryptoFrom = undefined;
     state.cryptoTo = undefined;
+    state.cryptoFromValue = undefined;
+    state.cryptoToValue = undefined;
   });
 });
 

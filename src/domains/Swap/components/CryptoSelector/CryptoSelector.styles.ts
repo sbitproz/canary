@@ -45,6 +45,7 @@ export const CryptoSelectorContainer = styled.div`
 
 export const ConversionLabel = styled.div`
   font-weight: 400;
+  height: 15px;
   line-height: 14px;
   color: ${colors.grey180};
 `;

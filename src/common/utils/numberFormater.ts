@@ -1,4 +1,8 @@
 export function numberFormatter(num: number, digits: number) {
+  if (num < 1000) {
+    return num;
+  }
+
   const lookup = [
     { value: 1, symbol: '' },
     { value: 1e3, symbol: 'k' },

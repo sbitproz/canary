@@ -1,5 +1,5 @@
 import { CryptoSelector } from '../CryptoSelector/CryptoSelector';
-import { SwapFormContainer } from './CryptoSwapForm.styles';
+import { SwapFormContainer, SwapUSDConversion } from './CryptoSwapForm.styles';
 import {
   cryptoFormButton,
   cryptoFormButtonProgress,
@@ -47,6 +47,9 @@ export const CryptoSwapForm = () => {
       <LargeButton type="primary" onClick={onProgress}>
         {cryptoFormButton[swapStage]}
       </LargeButton>
+      <SwapUSDConversion>
+        1 USDC = {cryptoFrom?.conversionRate} ${cryptoFrom?.value} ($1.00)
+      </SwapUSDConversion>
     </SwapFormContainer>
   );
 };
