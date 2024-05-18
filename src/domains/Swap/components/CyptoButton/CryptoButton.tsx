@@ -1,10 +1,10 @@
 import { Image } from 'antd';
-import { DownOutlined } from '@ant-design/icons';
 import { CryptoCurrency } from '@/common/constants/cryptos';
 import {
   Button,
   CryptoButtonContainer,
   CryptoValue,
+  DownArrowIcon,
 } from './CryptoButton.styles';
 
 interface CryptoButtonProps {
@@ -38,7 +38,7 @@ export const CryptoButton = ({
           preview={false}
           src={selectedCurrency.image}
           wrapperStyle={{
-            width: 23,
+            width: 32,
             position: 'absolute',
             left: 5,
             top: 3,
@@ -47,7 +47,7 @@ export const CryptoButton = ({
           alt={selectedCurrency.description}
         />{' '}
         <CryptoValue>{selectedCurrency.value}</CryptoValue>
-        <DownOutlined style={{ position: 'absolute', right: 8, top: 8 }} />
+        <DownArrowIcon />
       </Button>
     </CryptoButtonContainer>
   );
