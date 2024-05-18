@@ -1,0 +1,19 @@
+.ant-menu-overflow-item.ant-menu-item.ant-menu-item-only-child {
+  font-weight: 500;
+}
+
+.ant-menu-light
+  > .ant-menu-overflow-item.ant-menu-item.ant-menu-item-selected.ant-menu-item-only-child {
+  background-color: #ffbc00;
+  color: #ffffff;
+  /* font-weight: 500; */
+  border-bottom: 3px solid #ffffff;
+}
+
+/* .ant-menu-dark
+  > .ant-menu-overflow-item.ant-menu-item.ant-menu-item-selected.ant-menu-item-only-child {
+  background-color: #ffbc00;
+  color: #ffffff;
+  font-weight: 500;
+  border-bottom: 3px solid #ffffff;
+} */

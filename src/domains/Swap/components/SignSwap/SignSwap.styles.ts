@@ -9,7 +9,7 @@ export const SignSwapSteps = styled(Steps)`
     font-weight: 500;
   }
   .ant-steps-item-title {
-    color: ${colors.grey150} !important;
+    color: ${colors.grey120} !important;
   }
 `;
 
@@ -22,8 +22,4 @@ export const SignSwapActions = styled.div`
   align-items: flex-end;
 `;
 
-export const TopSub = styled.div`
-  font-weight: 600;
-  font-size: 14px;
-  color: ${colors.grey120};
-`;
+export const TopSub = styled.div``;

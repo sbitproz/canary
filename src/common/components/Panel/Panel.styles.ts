@@ -12,10 +12,13 @@ export const SignSwapContainer = styled.div`
 `;
 
 export const SignSwapTop = styled.div`
-  background-color: ${({ theme }) => theme.brandColors.primary195};
+  background-color: ${({ theme }) => theme.brandColors.primary140};
   width: 100%;
   text-align: center;
   display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  color: ${colors.grey120};
   flex-direction: column;
   align-items: center;
   padding: 2.5rem;

@@ -66,11 +66,7 @@ export const SignSwapActions = styled.div`
   align-items: flex-end;
 `;
 
-export const TopSub = styled.div`
-  font-weight: 600;
-  font-size: 14px;
-  color: ${colors.grey120};
-`;
+export const TopSub = styled.div``;
 
 export const BottomContainer = styled.div``;
 

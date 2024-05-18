@@ -15,17 +15,18 @@ export const Layout = () => {
     <BaseLayout>
       <Header>
         <Image
-          src="canary.svg"
+          src="canary-white.svg"
           width={40}
+          preview={false}
           alt="canary-protocol"
           wrapperStyle={{ marginRight: spacings.S5 }}
         />
         <Menu
           theme="light"
           mode="horizontal"
-          defaultSelectedKeys={['2']}
+          defaultSelectedKeys={['1']}
           items={items}
-          style={{ flex: 1, minWidth: 0 }}
+          style={{ marginLeft: 15, flex: 1, minWidth: 0 }}
         />
       </Header>
       <Outlet />

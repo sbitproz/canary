@@ -50,7 +50,7 @@ export const Tabs = styled(TabsBase)`
 `;
 
 export const Background = styled.div`
-  background: url(canary-background4.svg) no-repeat;
+  background: url(canary-background3.svg) no-repeat;
   background-size: auto 85vh;
   position: absolute;
   top: 0;

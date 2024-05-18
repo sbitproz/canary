@@ -35,14 +35,13 @@ export const simpleTheme: ThemeConfig = {
   components: {
     ...commonTheme.components,
     Menu: {
-      colorBgContainer: colors.white100,
-      colorText: simpleColors.primary100,
-      itemSelectedColor: simpleColors.primary200,
+      colorBgContainer: simpleColors.primary100,
+      colorText: colors.white100,
+      itemSelectedBg: 'red',
     },
     Layout: {
-      headerBg: colors.white100,
+      headerBg: simpleColors.primary100,
       colorBgLayout: colors.white100,
-      // colorBgHeader: colors.white100,
     },
     Card: {
       paddingContentHorizontal: 100,
