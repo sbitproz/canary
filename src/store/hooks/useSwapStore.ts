@@ -1,4 +1,3 @@
-import { selectSwap } from '../selectors/swap.selectors';
 import { useCallback } from 'react';
 import { ThemeOptions } from '@/theme/theme.constants';
 import { CryptoCurrency } from '@/common/constants/cryptos';
@@ -11,11 +10,10 @@ import {
   setToValueAction,
   setFromValueAction,
 } from '../actions/swapActions';
-import { useAppDispatch, useAppSelector } from '../hooks';
+import { useAppDispatch } from '../hooks';
 import { SwapStage } from '../reducers/swapReducer';
 
 export const useSwapStore = () => {
-  const swap = useAppSelector(selectSwap);
   const dispatch = useAppDispatch();
 
   const setTheme = useCallback(
@@ -25,14 +23,14 @@ export const useSwapStore = () => {
     [dispatch],
   );
 
-  const setFromCrypto = useCallback(
+  const setFromCryptoCurrency = useCallback(
     (crypto: CryptoCurrency) => {
       dispatch(setFromCryptoAction(crypto));
     },
     [dispatch],
   );
 
-  const setToCrypto = useCallback(
+  const setToCryptoCurrency = useCallback(
     (crypto: CryptoCurrency) => {
       dispatch(setToCryptoAction(crypto));
     },
@@ -46,26 +44,18 @@ export const useSwapStore = () => {
     [dispatch],
   );
 
-  const progressSwapStage = useCallback(() => {
-    dispatch(setSwapStageAction(swap.swapStage + 1));
-  }, [dispatch, swap.swapStage]);
-
-  const regressSwapStage = useCallback(() => {
-    dispatch(setSwapStageAction(swap.swapStage - 1));
-  }, [dispatch, swap.swapStage]);
-
   const resetCrypto = useCallback(() => {
     dispatch(resetCryptoAction());
   }, [dispatch]);
 
-  const setCryptoTo = useCallback(
+  const setCryptoToValue = useCallback(
     (value: number | null) => {
       dispatch(setToValueAction(value ?? undefined));
     },
     [dispatch],
   );
 
-  const setCryptoFrom = useCallback(
+  const setCryptoFromValue = useCallback(
     (value: number | null) => {
       dispatch(setFromValueAction(value ?? undefined));
     },
@@ -73,15 +63,12 @@ export const useSwapStore = () => {
   );
 
   return {
-    ...swap,
-    setCryptoTo,
-    setCryptoFrom,
+    setCryptoToValue,
+    setCryptoFromValue,
     setTheme,
-    setToCrypto,
-    setFromCrypto,
+    setToCryptoCurrency,
+    setFromCryptoCurrency,
     setSwapStage,
-    regressSwapStage,
-    progressSwapStage,
     resetCrypto,
   };
 };

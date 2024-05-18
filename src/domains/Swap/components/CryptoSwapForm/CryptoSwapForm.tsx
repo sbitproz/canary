@@ -7,23 +7,22 @@ import {
 import { useCallback } from 'react';
 import { LargeButton } from '@/common/components/Button/Button.styles';
 import { useSwapStore } from '@/store/hooks/useSwapStore';
+import { useCryptoSwapForm } from './useCryptoSwapForm';
 
 const fromLabel = 'You pay';
 const toLabel = 'You receive';
 
 export const CryptoSwapForm = () => {
   const {
-    swapStage,
     setSwapStage,
-    setFromCrypto,
-    setToCrypto,
-    cryptoFrom,
-    cryptoTo,
-    cryptoFromValue,
-    cryptoToValue,
-    setCryptoFrom,
-    setCryptoTo,
+    setCryptoFromValue,
+    setFromCryptoCurrency,
+    setCryptoToValue,
+    setToCryptoCurrency,
   } = useSwapStore();
+
+  const { cryptoFrom, cryptoFromValue, cryptoTo, cryptoToValue, swapStage } =
+    useCryptoSwapForm();
 
   const onProgress = useCallback(() => {
     setSwapStage(cryptoFormButtonProgress[swapStage]);
@@ -32,18 +31,18 @@ export const CryptoSwapForm = () => {
   return (
     <SwapFormContainer>
       <CryptoSelector
-        onSetValue={setCryptoFrom}
-        // value={cryptoFromValue}
+        onSetValue={setCryptoFromValue}
+        value={cryptoFromValue}
         label={fromLabel}
         selectedCurrency={cryptoFrom}
-        onSelectedCurrency={setFromCrypto}
+        onSelectedCurrency={setFromCryptoCurrency}
       />
       <CryptoSelector
-        onSetValue={setCryptoTo}
-        // value={cryptoToValue}
+        onSetValue={setCryptoToValue}
+        value={cryptoToValue}
         label={toLabel}
         selectedCurrency={cryptoTo}
-        onSelectedCurrency={setToCrypto}
+        onSelectedCurrency={setToCryptoCurrency}
       />
       <LargeButton type="primary" onClick={onProgress}>
         {cryptoFormButton[swapStage]}

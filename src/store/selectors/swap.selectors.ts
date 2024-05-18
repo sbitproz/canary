@@ -14,3 +14,10 @@ export const selectSwapStage = createSelector(
   selectSwap,
   (swap) => swap.swapStage,
 );
+
+export const selectSwapCryptoSelector = createSelector(selectSwap, (swap) => ({
+  cryptoFromValue: swap.cryptoFromValue,
+  cryptoToValue: swap.cryptoToValue,
+  cryptoFrom: swap.cryptoFrom,
+  cryptoTo: swap.cryptoTo,
+}));

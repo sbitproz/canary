@@ -1,9 +1,13 @@
+import { useAppSelector } from '@/store/hooks';
 import { useSwapStore } from '@/store/hooks/useSwapStore';
 import { SwapStage } from '@/store/reducers/swapReducer';
+import { selectSwapStage } from '@/store/selectors/swap.selectors';
 import { useCallback, useEffect, useState } from 'react';
 
 export const useSwap = () => {
-  const { swapStage, setSwapStage } = useSwapStore();
+  const { setSwapStage } = useSwapStore();
+
+  const swapStage = useAppSelector(selectSwapStage);
 
   const [isMetaMaskVisible, setIsMetaMaskVisible] = useState<boolean>(false);
 
