@@ -1,11 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import { App as AntProvider } from "antd";
-import { ThemeProvider } from "./theme/ThemeProvider.tsx";
-import "./index.css";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.tsx';
+import { App as AntProvider } from 'antd';
+import { ThemeProvider } from './theme/ThemeProvider.tsx';
+import './index.css';
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeProvider>
       <AntProvider
@@ -18,5 +18,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <App />
       </AntProvider>
     </ThemeProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

@@ -1,12 +1,12 @@
-import { colors, funColors, simpleColors, BrandColors } from "../styles/colors";
-import { ThemeConfig } from "antd";
+import { colors, funColors, simpleColors, BrandColors } from '../styles/colors';
+import { ThemeConfig } from 'antd';
 
 export enum ThemeOptions {
-  SIMPLE = "SIMPLE",
-  FUN = "FUN",
+  SIMPLE = 'SIMPLE',
+  FUN = 'FUN',
 }
 
-export const standardBoxShadow = "rgba(149, 157, 165, 0.2) 0px 8px 24px";
+export const standardBoxShadow = 'rgba(149, 157, 165, 0.2) 0px 8px 24px';
 
 export const screen = {
   minWidth: 1100,
@@ -15,7 +15,7 @@ export const screen = {
 export const commonTheme: ThemeConfig = {
   token: {
     fontFamily:
-      "Roboto, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
+      'Roboto, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif',
   },
   components: {
     Typography: {
@@ -72,11 +72,11 @@ export const funTheme: ThemeConfig = {
 export const domainThemeMap = {
   SIMPLE: {
     theme: ThemeOptions.SIMPLE,
-    match: ["aston"],
+    match: ['aston'],
   },
   CHOPIN: {
     theme: ThemeOptions.FUN,
-    match: ["chopin"],
+    match: ['chopin'],
   },
 };
 

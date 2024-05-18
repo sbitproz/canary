@@ -1,6 +1,6 @@
-import { colors } from "@/styles/colors";
-import { Steps } from "antd";
-import styled from "@emotion/styled";
+import { colors } from '@/styles/colors';
+import { Steps } from 'antd';
+import styled from '@emotion/styled';
 
 export const SignSwapSteps = styled(Steps)`
   .ant-steps-item-title {

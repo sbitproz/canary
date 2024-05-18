@@ -1,9 +1,9 @@
-import { useApiInterceptor } from "./api/hooks/useApiInterceptor";
-import { Provider } from "react-redux";
-import { RouterProvider } from "react-router-dom";
-import { router } from "./router";
-import "./App.css";
-import { store } from "./store/store";
+import { useApiInterceptor } from './api/hooks/useApiInterceptor';
+import { Provider } from 'react-redux';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './router';
+import './App.css';
+import { store } from './store/store';
 
 function App() {
   const { ready } = useApiInterceptor();

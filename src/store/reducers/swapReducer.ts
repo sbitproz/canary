@@ -1,17 +1,21 @@
-import { createReducer } from "@reduxjs/toolkit";
-import { ThemeOptions } from "@/theme/theme.constants";
-import { CryptoCurrency } from "@/common/constants/cryptos";
+import { createReducer } from '@reduxjs/toolkit';
+import { ThemeOptions } from '@/theme/theme.constants';
+import { CryptoCurrency } from '@/common/constants/cryptos';
 import {
   resetCryptoAction,
   setFromCryptoAction,
+  setFromValueAction,
   setSwapStageAction,
   setSwapThemeAction,
   setToCryptoAction,
-} from "../actions/swapActions";
+  setToValueAction,
+} from '../actions/swapActions';
 
 export interface SwapState {
   cryptoFrom?: CryptoCurrency;
+  cryptoFromValue?: number;
   cryptoTo?: CryptoCurrency;
+  cryptoToValue?: number;
   theme: ThemeOptions;
   swapStage: SwapStage;
 }
@@ -36,6 +40,12 @@ export const initialState = {
 const swapReducer = createReducer(initialState, (builder) => {
   builder.addCase(setFromCryptoAction, (state: SwapState, action) => {
     state.cryptoFrom = action.payload;
+  });
+  builder.addCase(setFromValueAction, (state: SwapState, action) => {
+    state.cryptoFromValue = action.payload;
+  });
+  builder.addCase(setToValueAction, (state: SwapState, action) => {
+    state.cryptoToValue = action.payload;
   });
   builder.addCase(setToCryptoAction, (state: SwapState, action) => {
     state.cryptoTo = action.payload;

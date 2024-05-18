@@ -1,9 +1,9 @@
-import { spacings } from "@/styles/spacings";
-import styled from "@emotion/styled";
-import { Flex } from "antd";
+import { spacings } from '@/styles/spacings';
+import styled from '@emotion/styled';
+import { Flex } from 'antd';
 
 export const shouldForwardProp = {
-  shouldForwardProp: (prop: string) => !prop.startsWith("$"),
+  shouldForwardProp: (prop: string) => !prop.startsWith('$'),
 };
 
 export const Container = styled(Flex, shouldForwardProp)<{

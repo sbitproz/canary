@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { Modal as ModalBase } from "antd";
+import styled from '@emotion/styled';
+import { Modal as ModalBase } from 'antd';
 
 export const Modal = styled(ModalBase)`
   .ant-modal-body {

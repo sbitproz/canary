@@ -1,8 +1,8 @@
-import { ThemeProvider as EmotionThemeProvider } from "@emotion/react";
-import { ConfigProvider, theme } from "antd";
-import { BrandColors, colors } from "../styles/colors";
-import { useTheme } from "./useTheme";
-import { PropsWithChildren } from "react";
+import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
+import { ConfigProvider, theme } from 'antd';
+import { BrandColors, colors } from '../styles/colors';
+import { useTheme } from './useTheme';
+import { PropsWithChildren } from 'react';
 
 interface WithEmotionTheme {
   brandColors: BrandColors;

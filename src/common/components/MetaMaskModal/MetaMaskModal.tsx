@@ -1,6 +1,6 @@
-import { Image, Typography } from "antd";
-import { PropsWithChildren } from "react";
-import { Modal } from "./MetaMaskModal.styles";
+import { Image, Typography } from 'antd';
+import { PropsWithChildren } from 'react';
+import { Modal } from './MetaMaskModal.styles';
 
 interface MetaMaskModalProps {
   isModalOpen: boolean;
@@ -14,11 +14,11 @@ interface MetaMaskModalProps {
 export const MetaMaskModal = ({
   isModalOpen,
   children,
-  okLabel = "OK",
+  okLabel = 'OK',
   onOk,
-  cancelLabel = "Cancel",
+  cancelLabel = 'Cancel',
   onCancel,
-  title = "Welcome",
+  title = 'Welcome',
 }: PropsWithChildren<MetaMaskModalProps>) => {
   return (
     <Modal

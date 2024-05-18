@@ -1,5 +1,5 @@
-import { Button as ButtonBase } from "antd";
-import styled from "@emotion/styled";
+import { Button as ButtonBase } from 'antd';
+import styled from '@emotion/styled';
 
 export const Button = styled(ButtonBase)`
   border-radius: 20px;

@@ -1,11 +1,11 @@
-import { Image } from "antd";
+import { Image } from 'antd';
 import {
   SignSwapContainer,
   SignSwapContent,
   SignSwapTop,
-} from "./Panel.styles";
-import { spacings } from "@/styles/spacings";
-import { ReactNode } from "react";
+} from './Panel.styles';
+import { spacings } from '@/styles/spacings';
+import { ReactNode } from 'react';
 
 interface PanelProps {
   topSection: ReactNode;

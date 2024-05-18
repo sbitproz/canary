@@ -1,10 +1,9 @@
-import { CryptoCurrency, cryptos } from "@/common/constants/cryptos";
-import { colors } from "@/styles/colors";
-import { spacings } from "@/styles/spacings";
-import { Flex, Image, Input, Modal } from "antd";
-import { useState } from "react";
+import { CryptoCurrency, cryptos } from '@/common/constants/cryptos';
+import { colors } from '@/styles/colors';
+import { spacings } from '@/styles/spacings';
+import { Flex, Image, Input, Modal } from 'antd';
 
-const modalTitle = "Select a token";
+const modalTitle = 'Select a token';
 
 const { Search } = Input;
 
@@ -15,7 +14,7 @@ interface CryptoElementProps {
 
 const CryptoElement = ({ crypto, onClick }: CryptoElementProps) => {
   return (
-    <Flex style={{ marginBottom: 10, cursor: "pointer" }} onClick={onClick}>
+    <Flex style={{ marginBottom: 10, cursor: 'pointer' }} onClick={onClick}>
       <Image
         src={crypto.image}
         width={35}
@@ -28,13 +27,13 @@ const CryptoElement = ({ crypto, onClick }: CryptoElementProps) => {
         }}
       />
       <div>
-        <div style={{ fontWeight: 600, lineHeight: "15px" }}>
+        <div style={{ fontWeight: 600, lineHeight: '15px' }}>
           {crypto.value}
         </div>
         <div
           style={{
             color: colors.grey150,
-            textTransform: "uppercase",
+            textTransform: 'uppercase',
             fontSize: 12,
             marginTop: 2,
           }}
@@ -73,7 +72,7 @@ export const CryptoModalList = ({
           borderBottom: `1px solid  ${colors.grey187}`,
         }}
       />
-      <div style={{ height: 500, overflowY: "auto" }}>
+      <div style={{ height: 500, overflowY: 'auto' }}>
         {cryptos.map((crypto) => (
           <CryptoElement
             key={crypto.value}

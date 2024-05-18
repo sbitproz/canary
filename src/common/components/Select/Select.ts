@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
 export const selectStyles = css`
   height: 40px;
@@ -12,7 +12,6 @@ export const selectStyles = css`
 export const selectCryptoStyles = css`
   height: 40px;
   min-width: 150px;
-  
 
   .ant-select-selector {
     border-radius: 50px;

@@ -1,5 +1,5 @@
-import { useSwapStore } from "@/store/hooks/useSwapStore";
-import { useCallback } from "react";
+import { useSwapStore } from '@/store/hooks/useSwapStore';
+import { useCallback } from 'react';
 
 export const useCryptoSubmitted = () => {
   const { setSwapStage, resetCrypto } = useSwapStore();
@@ -10,6 +10,6 @@ export const useCryptoSubmitted = () => {
   }, [resetCrypto, setSwapStage]);
 
   return {
-    onMakeAnotherSwap
-  }
+    onMakeAnotherSwap,
+  };
 };

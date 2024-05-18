@@ -1,16 +1,18 @@
-import { selectSwap } from "../selectors/swap.selectors";
-import { useCallback } from "react";
-import { ThemeOptions } from "@/theme/theme.constants";
-import { CryptoCurrency } from "@/common/constants/cryptos";
+import { selectSwap } from '../selectors/swap.selectors';
+import { useCallback } from 'react';
+import { ThemeOptions } from '@/theme/theme.constants';
+import { CryptoCurrency } from '@/common/constants/cryptos';
 import {
   resetCryptoAction,
   setFromCryptoAction,
   setSwapStageAction,
   setSwapThemeAction,
   setToCryptoAction,
-} from "../actions/swapActions";
-import { useAppDispatch, useAppSelector } from "../hooks";
-import { SwapStage } from "../reducers/swapReducer";
+  setToValueAction,
+  setFromValueAction,
+} from '../actions/swapActions';
+import { useAppDispatch, useAppSelector } from '../hooks';
+import { SwapStage } from '../reducers/swapReducer';
 
 export const useSwapStore = () => {
   const swap = useAppSelector(selectSwap);
@@ -20,44 +22,60 @@ export const useSwapStore = () => {
     (option: ThemeOptions) => {
       dispatch(setSwapThemeAction(option));
     },
-    [dispatch]
+    [dispatch],
   );
 
   const setFromCrypto = useCallback(
     (crypto: CryptoCurrency) => {
       dispatch(setFromCryptoAction(crypto));
     },
-    [dispatch]
+    [dispatch],
   );
 
   const setToCrypto = useCallback(
     (crypto: CryptoCurrency) => {
       dispatch(setToCryptoAction(crypto));
     },
-    [dispatch]
+    [dispatch],
   );
 
   const setSwapStage = useCallback(
     (swapStage: SwapStage) => {
       dispatch(setSwapStageAction(swapStage));
     },
-    [dispatch]
+    [dispatch],
   );
 
   const progressSwapStage = useCallback(() => {
     dispatch(setSwapStageAction(swap.swapStage + 1));
-  }, [dispatch]);
+  }, [dispatch, swap.swapStage]);
 
   const regressSwapStage = useCallback(() => {
     dispatch(setSwapStageAction(swap.swapStage - 1));
-  }, [dispatch]);
+  }, [dispatch, swap.swapStage]);
 
   const resetCrypto = useCallback(() => {
     dispatch(resetCryptoAction());
   }, [dispatch]);
 
+  const setCryptoTo = useCallback(
+    (value: number | null) => {
+      dispatch(setToValueAction(value ?? undefined));
+    },
+    [dispatch],
+  );
+
+  const setCryptoFrom = useCallback(
+    (value: number | null) => {
+      dispatch(setFromValueAction(value ?? undefined));
+    },
+    [dispatch],
+  );
+
   return {
     ...swap,
+    setCryptoTo,
+    setCryptoFrom,
     setTheme,
     setToCrypto,
     setFromCrypto,

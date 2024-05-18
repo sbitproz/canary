@@ -2,9 +2,9 @@ import {
   ThemeOptions,
   brandColorsConfig,
   brandThemeConfig,
-} from "./theme.constants";
-import { BrandColors } from "../styles/colors";
-import { ThemeConfig } from "antd";
+} from './theme.constants';
+import { BrandColors } from '../styles/colors';
+import { ThemeConfig } from 'antd';
 
 export const useTheme = (): {
   theme: ThemeConfig;

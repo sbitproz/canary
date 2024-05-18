@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { Input } from "antd";
+import styled from '@emotion/styled';
+import { Input } from 'antd';
 
 const { Search: SearchBase } = Input;
 

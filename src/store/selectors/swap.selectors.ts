@@ -1,5 +1,5 @@
-import { createSelector } from "@reduxjs/toolkit";
-import { RootState } from "../store";
+import { createSelector } from '@reduxjs/toolkit';
+import { RootState } from '../store';
 
 export const selectSwap = (state: RootState) => state.swap;
 
@@ -12,5 +12,5 @@ export const selectTheme = createSelector(selectSwap, (swap) => swap.theme);
 
 export const selectSwapStage = createSelector(
   selectSwap,
-  (swap) => swap.swapStage
+  (swap) => swap.swapStage,
 );

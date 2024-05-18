@@ -1,4 +1,3 @@
-
 import { Container } from './Error.styles';
 import { Typography } from 'antd';
 import { colors } from '@/styles/colors';

@@ -1,6 +1,6 @@
-import { ErrorBoundary as BoundaryBase } from "react-error-boundary";
-import { Error, ErrorSize } from "../Error/Error";
-import { PropsWithChildren } from "react";
+import { ErrorBoundary as BoundaryBase } from 'react-error-boundary';
+import { Error, ErrorSize } from '../Error/Error';
+import { PropsWithChildren } from 'react';
 
 interface ErrorBoundary {
   label: string;

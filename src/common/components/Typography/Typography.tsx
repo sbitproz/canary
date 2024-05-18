@@ -1,6 +1,6 @@
-import { colors } from "@/styles/colors";
-import styled from "@emotion/styled";
-import { Typography } from "antd";
+import { colors } from '@/styles/colors';
+import styled from '@emotion/styled';
+import { Typography } from 'antd';
 
 export const { Title: TitleBase } = Typography;
 

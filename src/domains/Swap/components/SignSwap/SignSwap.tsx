@@ -1,15 +1,15 @@
-import { Typography } from "antd";
-import { SignSwapActions, SignSwapSteps, TopSub } from "./SignSwap.styles";
-import { LargeButton } from "@/common/components/Button/Button.styles";
-import { Panel } from "@/common/components/Panel/Panel";
+import { Typography } from 'antd';
+import { SignSwapActions, SignSwapSteps, TopSub } from './SignSwap.styles';
+import { LargeButton } from '@/common/components/Button/Button.styles';
+import { Panel } from '@/common/components/Panel/Panel';
 
 const items = [
   {
-    title: "Sign the order with your wallet",
-    description: "(0x789C...61a5)",
+    title: 'Sign the order with your wallet',
+    description: '(0x789C...61a5)',
   },
   {
-    title: "The order is submitted and ready to be settled",
+    title: 'The order is submitted and ready to be settled',
   },
 ];
 

@@ -1,7 +1,7 @@
-import { colors } from "@/styles/colors";
-import { spacings } from "@/styles/spacings";
-import styled from "@emotion/styled";
-import { InputNumber as InputNumberBase } from "antd";
+import { colors } from '@/styles/colors';
+import { spacings } from '@/styles/spacings';
+import styled from '@emotion/styled';
+import { InputNumber as InputNumberBase } from 'antd';
 
 export const InputLabel = styled.div`
   font-weight: 400;
@@ -31,8 +31,6 @@ export const InputNumber = styled(InputNumberBase)`
     border: transparent;
     box-shadow: none;
   }
-
-  
 `;
 
 export const CryptoSelectorContainer = styled.div`
@@ -45,9 +43,14 @@ export const CryptoSelectorContainer = styled.div`
   margin-bottom: ${spacings.S2}px;
 `;
 
-
 export const ConversionLabel = styled.div`
   font-weight: 400;
   line-height: 14px;
   color: ${colors.grey180};
+`;
+
+export const InputButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;

@@ -1,9 +1,9 @@
-import { SwapStage } from "@/store/reducers/swapReducer";
+import { SwapStage } from '@/store/reducers/swapReducer';
 
 export const cryptoFormButton: Record<string, string> = {
-  [SwapStage.WALLET_UNCONECTED]: "Connect Wallet",
-  [SwapStage.WALLET_CONNECT]: "Confirm Swap",
-  [SwapStage.CONFIRM_SWAP]: "Confirm Swap",
+  [SwapStage.WALLET_UNCONECTED]: 'Connect Wallet',
+  [SwapStage.WALLET_CONNECT]: 'Confirm Swap',
+  [SwapStage.CONFIRM_SWAP]: 'Confirm Swap',
 };
 
 export const cryptoFormButtonProgress: Record<string, SwapStage> = {

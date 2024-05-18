@@ -1,11 +1,10 @@
-import { Typography } from "antd";
-import { SignSwapActions, TopSub } from "./CryptoSubmitted.styles";
-import { LargeButton } from "@/common/components/Button/Button.styles";
-import { Panel } from "@/common/components/Panel/Panel";
-import { useCryptoSubmitted } from "./useCryptoSubmitted";
+import { Typography } from 'antd';
+import { SignSwapActions, TopSub } from './CryptoSubmitted.styles';
+import { LargeButton } from '@/common/components/Button/Button.styles';
+import { Panel } from '@/common/components/Panel/Panel';
+import { useCryptoSubmitted } from './useCryptoSubmitted';
 
 export const CryptoSubmitted = () => {
-
   const { onMakeAnotherSwap } = useCryptoSubmitted();
 
   return (

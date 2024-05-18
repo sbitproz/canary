@@ -1,6 +1,6 @@
-import { colors } from "@/styles/colors";
-import { spacings } from "@/styles/spacings";
-import styled from "@emotion/styled";
+import { colors } from '@/styles/colors';
+import { spacings } from '@/styles/spacings';
+import styled from '@emotion/styled';
 
 export const SignSwapContainer = styled.div`
   width: 450px;
