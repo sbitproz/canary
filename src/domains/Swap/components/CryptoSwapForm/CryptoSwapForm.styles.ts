@@ -1,4 +1,3 @@
-import { colors } from '@/styles/colors';
 import styled from '@emotion/styled';
 
 export const SwapFormContainer = styled.div`
@@ -8,5 +7,5 @@ export const SwapFormContainer = styled.div`
 export const SwapUSDConversion = styled.div`
   margin-top: 1.25rem;
   font-weight: 500;
-  color: ${colors.grey120};
+  color: ${({ theme }) => theme.brandColors.inverseText100};
 `;

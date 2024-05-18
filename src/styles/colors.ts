@@ -34,6 +34,7 @@ export interface BrandColors {
   panelBg100: string;
   text100: string;
   inverseText100: string;
+  disabled100: string;
 }
 
 export const darkColors: BrandColors = {
@@ -49,6 +50,7 @@ export const darkColors: BrandColors = {
   panelBg100: colors.white100,
   text100: colors.black100,
   inverseText100: colors.white100,
+  disabled100: '#896500',
 };
 
 export const lightColors: BrandColors = {
@@ -64,4 +66,5 @@ export const lightColors: BrandColors = {
   panelBg100: 'none',
   text100: colors.white100,
   inverseText100: colors.black100,
+  disabled100: '#d9d9d9',
 };

@@ -11,7 +11,6 @@ import { metaMaskProps } from './Swap.constants';
 import { SignSwap } from './components/SignSwap/SignSwap';
 import { CryptoSubmitted } from './components/CryptoSubmitted/CryptoSubmitted';
 import { SwapStage } from '@/store/reducers/swapReducer';
-import { ThemeOptions } from '@/theme/theme.constants';
 
 const userErrorLabel = somethingWentWrong('the swap page');
 
@@ -22,8 +21,6 @@ export const Swap = () => {
     onCloseMetaMask,
     swapStage,
     onProgress,
-    theme,
-    setTheme,
   } = useSwap();
 
   const items: TabsProps['items'] = [
@@ -70,17 +67,6 @@ export const Swap = () => {
           <Component />
         </ErrorBoundary>
       </Content>
-      <button
-        onClick={() =>
-          setTheme(
-            theme === ThemeOptions.LIGHT
-              ? ThemeOptions.DARK
-              : ThemeOptions.LIGHT,
-          )
-        }
-      >
-        click theme
-      </button>
     </>
   );
 };

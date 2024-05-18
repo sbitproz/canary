@@ -1,4 +1,5 @@
 import { colors } from '@/styles/colors';
+import { Switch as SwitchBase } from 'antd';
 import styled from '@emotion/styled';
 import { Layout } from 'antd';
 const { Header: HeaderBase, Footer: FooterBase } = Layout;
@@ -19,4 +20,11 @@ export const Footer = styled(FooterBase)`
   border-bottom: 1px solid ${colors.grey187};
   display: flex;
   justify-content: space-between;
+`;
+
+export const Switch = styled(SwitchBase)`
+  margin-top: 2rem;
+  .ant-switch-inner {
+    background: rgba(0, 0, 0, 0.25) !important;
+  }
 `;

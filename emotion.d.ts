@@ -30,6 +30,7 @@ declare module '@emotion/react' {
       panelBg100: string;
       text100: string;
       inverseText100: string;
+      disabled100: string;
     };
     theme: GlobalToken;
   }

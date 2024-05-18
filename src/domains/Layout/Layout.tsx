@@ -1,8 +1,13 @@
 import { Image, Menu } from 'antd';
-import { BaseLayout, Footer, Header } from './Layout.styles';
+import { BaseLayout, Footer, Header, Switch } from './Layout.styles';
 import { Outlet } from 'react-router-dom';
 import { spacings } from '@/styles/spacings';
 import { ExportOutlined } from '@ant-design/icons';
+import { useCallback } from 'react';
+import { useSwapStore } from '@/store/hooks/useSwapStore';
+import { useAppSelector } from '@/store/hooks';
+import { selectTheme } from '@/store/selectors/swap.selectors';
+import { ThemeOptions } from '@/theme/theme.constants';
 
 const items = [
   { label: 'Swap', key: '1' },
@@ -12,6 +17,15 @@ const items = [
 ];
 
 export const Layout = () => {
+  const { setTheme } = useSwapStore();
+  const theme = useAppSelector(selectTheme);
+
+  const onChange = useCallback(() => {
+    setTheme(
+      theme === ThemeOptions.LIGHT ? ThemeOptions.DARK : ThemeOptions.LIGHT,
+    );
+  }, [theme, setTheme]);
+
   return (
     <BaseLayout data-testid="base-layout">
       <Header>
@@ -29,6 +43,7 @@ export const Layout = () => {
           items={items}
           style={{ marginLeft: 15, flex: 1, minWidth: 0 }}
         />
+        <Switch defaultChecked onChange={onChange} />
       </Header>
       <Outlet />
       <Footer>

@@ -34,6 +34,9 @@ export const lightTheme: ThemeConfig = {
   },
   components: {
     ...commonTheme.components,
+    Button: {
+      primaryColor: colors.white100,
+    },
     Menu: {
       colorBgContainer: lightColors.primary100,
       colorText: colors.white100,
@@ -52,6 +55,9 @@ export const darkTheme: ThemeConfig = {
   },
   components: {
     ...commonTheme.components,
+    Button: {
+      primaryColor: colors.black100,
+    },
     Menu: {
       colorBgContainer: darkColors.primary100,
       colorText: colors.white100,
