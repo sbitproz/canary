@@ -15,6 +15,8 @@ const items = [
   },
 ];
 
+const signSwapButtonLabel = 'Sign swap order';
+
 interface SignSwapProps {
   onClickSign: () => void;
 }
@@ -33,14 +35,14 @@ export const SignSwap = ({ onClickSign }: SignSwapProps) => {
       }
       bottomSection={
         <>
-          <div style={{ marginBottom: 50 }}>
+          <div style={{ marginBottom: 50, textAlign: 'center' }}>
             <Typography.Title level={3}>Almost there!</Typography.Title>
             <Typography.Title level={4}>Follow these steps:</Typography.Title>
           </div>
           <SignSwapSteps current={1} labelPlacement="vertical" items={items} />
           <SignSwapActions>
             <LargeButton type="primary" onClick={onClickSign}>
-              Sign Swap Order
+              {signSwapButtonLabel}
             </LargeButton>
           </SignSwapActions>
         </>

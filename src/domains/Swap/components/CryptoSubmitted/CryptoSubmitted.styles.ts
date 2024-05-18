@@ -59,7 +59,6 @@ export const SignSwapSteps = styled(Steps)`
 `;
 
 export const SignSwapActions = styled.div`
-  margin-top: 40px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -71,4 +70,10 @@ export const TopSub = styled.div`
   font-weight: 600;
   font-size: 14px;
   color: ${colors.grey120};
+`;
+
+export const BottomContainer = styled.div``;
+
+export const CryptoTitle = styled.div`
+  margin-top: 3px;
 `;
