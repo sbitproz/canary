@@ -33,14 +33,14 @@ export const CryptoSwapForm = () => {
     <SwapFormContainer>
       <CryptoSelector
         onSetValue={setCryptoFrom}
-        value={cryptoFromValue}
+        // value={cryptoFromValue}
         label={fromLabel}
         selectedCurrency={cryptoFrom}
         onSelectedCurrency={setFromCrypto}
       />
       <CryptoSelector
         onSetValue={setCryptoTo}
-        value={cryptoToValue}
+        // value={cryptoToValue}
         label={toLabel}
         selectedCurrency={cryptoTo}
         onSelectedCurrency={setToCrypto}
