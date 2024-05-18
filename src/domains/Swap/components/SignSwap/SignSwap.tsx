@@ -2,6 +2,8 @@ import { Typography } from 'antd';
 import { SignSwapActions, SignSwapSteps, TopSub } from './SignSwap.styles';
 import { LargeButton } from '@/common/components/Button/Button.styles';
 import { Panel } from '@/common/components/Panel/Panel';
+import { useAppSelector } from '@/store/hooks';
+import { selectSwapCryptoSelector } from '@/store/selectors/swap.selectors';
 
 const items = [
   {
@@ -18,9 +20,17 @@ interface SignSwapProps {
 }
 
 export const SignSwap = ({ onClickSign }: SignSwapProps) => {
+  const { cryptoFromValue, cryptoFrom, cryptoToValue, cryptoTo } =
+    useAppSelector(selectSwapCryptoSelector);
+
   return (
     <Panel
-      topSection={<TopSub>Swapping 1 ETH for 8.612456 DAI</TopSub>}
+      topSection={
+        <TopSub>
+          Swapping {cryptoFromValue} {cryptoFrom?.value} for {cryptoToValue}{' '}
+          {cryptoTo?.value}
+        </TopSub>
+      }
       bottomSection={
         <>
           <div style={{ marginBottom: 50 }}>

@@ -18,3 +18,9 @@ export function numberFormatter(num: number, digits: number) {
     ? (num / item.value).toFixed(digits).replace(regexp, '').concat(item.symbol)
     : '0';
 }
+
+export const inputNumberFormatter = (value: unknown) =>
+  `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+export const numberParser = (value: string | undefined): number =>
+  Number(value!.replace(/\$\s?|(,*)/g, ''));

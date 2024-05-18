@@ -6,7 +6,6 @@ import {
 } from './CryptoSwapForm.constants';
 import { useCallback } from 'react';
 import { LargeButton } from '@/common/components/Button/Button.styles';
-import { useSwapStore } from '@/store/hooks/useSwapStore';
 import { useCryptoSwapForm } from './useCryptoSwapForm';
 
 const fromLabel = 'You pay';
@@ -14,15 +13,18 @@ const toLabel = 'You receive';
 
 export const CryptoSwapForm = () => {
   const {
+    disableButton,
+    cryptoFrom,
+    cryptoFromValue,
+    cryptoTo,
+    cryptoToValue,
+    swapStage,
     setSwapStage,
-    setCryptoFromValue,
+    onChangeFromValue,
     setFromCryptoCurrency,
     setCryptoToValue,
     setToCryptoCurrency,
-  } = useSwapStore();
-
-  const { cryptoFrom, cryptoFromValue, cryptoTo, cryptoToValue, swapStage } =
-    useCryptoSwapForm();
+  } = useCryptoSwapForm();
 
   const onProgress = useCallback(() => {
     setSwapStage(cryptoFormButtonProgress[swapStage]);
@@ -31,7 +33,7 @@ export const CryptoSwapForm = () => {
   return (
     <SwapFormContainer>
       <CryptoSelector
-        onSetValue={setCryptoFromValue}
+        onSetValue={onChangeFromValue}
         value={cryptoFromValue}
         label={fromLabel}
         selectedCurrency={cryptoFrom}
@@ -41,10 +43,11 @@ export const CryptoSwapForm = () => {
         onSetValue={setCryptoToValue}
         value={cryptoToValue}
         label={toLabel}
+        readonly
         selectedCurrency={cryptoTo}
         onSelectedCurrency={setToCryptoCurrency}
       />
-      <LargeButton type="primary" onClick={onProgress}>
+      <LargeButton disabled={disableButton} type="primary" onClick={onProgress}>
         {cryptoFormButton[swapStage]}
       </LargeButton>
       <SwapUSDConversion>

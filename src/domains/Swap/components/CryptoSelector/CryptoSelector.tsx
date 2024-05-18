@@ -9,7 +9,11 @@ import {
 import { CryptoButton } from '../CyptoButton/CryptoButton';
 import { CryptoModalList } from '../CryptoModalList/CryptoModalList';
 import { useCallback, useState } from 'react';
-import { numberFormatter } from '@/common/utils/numberFormater';
+import {
+  inputNumberFormatter,
+  numberFormatter,
+  numberParser,
+} from '@/common/utils/numberFormater';
 
 interface CryptoSelectorProps {
   label: string;
@@ -17,6 +21,7 @@ interface CryptoSelectorProps {
   onSelectedCurrency: (crypt: CryptoCurrency) => void;
   onSetValue: (value: number | null) => void;
   value?: number;
+  readonly?: boolean;
 }
 
 export const CryptoSelector = ({
@@ -24,6 +29,7 @@ export const CryptoSelector = ({
   onSelectedCurrency,
   selectedCurrency,
   onSetValue,
+  readonly,
   value,
 }: CryptoSelectorProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,8 +52,11 @@ export const CryptoSelector = ({
       <InputLabel>{label}</InputLabel>
       <InputButtonContainer>
         <InputNumber
+          readOnly={readonly}
           key={label}
           placeholder="0"
+          formatter={inputNumberFormatter}
+          parser={numberParser}
           controls={false}
           value={value}
           onChange={(value) => {
@@ -63,7 +72,7 @@ export const CryptoSelector = ({
         {!!selectedCurrency && !!value && (
           <>
             &#36;
-            {numberFormatter((value ?? 0) * selectedCurrency.conversionRate, 5)}
+            {numberFormatter((value ?? 0) / selectedCurrency.conversionRate, 5)}
           </>
         )}
       </ConversionLabel>

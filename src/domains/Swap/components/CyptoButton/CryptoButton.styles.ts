@@ -7,3 +7,8 @@ export const Button = styled(ButtonBase)`
   display: flex;
   align-items: center;
 `;
+
+export const CryptoValue = styled.div`
+  margin-left: 23px;
+  margin-right: 13px;
+`;

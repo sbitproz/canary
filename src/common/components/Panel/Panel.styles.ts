@@ -14,6 +14,7 @@ export const SignSwapContainer = styled.div`
 export const SignSwapTop = styled.div`
   background-color: ${({ theme }) => theme.brandColors.primary195};
   width: 100%;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,6 +32,7 @@ export const SignSwapContent = styled.div`
   padding-top: 4rem;
 
   border: 1px solid ${colors.grey185};
+  border-top: 0px;
   border-radius: 0 0 ${spacings.S5}px ${spacings.S5}px;
 
   && h4 {

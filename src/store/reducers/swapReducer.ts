@@ -12,7 +12,7 @@ import {
 } from '../actions/swapActions';
 
 export interface SwapState {
-  cryptoFrom?: CryptoCurrency;
+  cryptoFrom: CryptoCurrency;
   cryptoFromValue?: number;
   cryptoTo?: CryptoCurrency;
   cryptoToValue?: number;
@@ -57,7 +57,7 @@ const swapReducer = createReducer(initialState, (builder) => {
     state.swapStage = action.payload;
   });
   builder.addCase(resetCryptoAction, (state: SwapState) => {
-    state.cryptoFrom = undefined;
+    state.cryptoFrom = ethereumCrypto;
     state.cryptoTo = undefined;
     state.cryptoFromValue = undefined;
     state.cryptoToValue = undefined;

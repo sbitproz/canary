@@ -28,7 +28,7 @@ export const cryptos: CryptoCurrency[] = [
     value: 'APE',
     description: 'ApeCoin',
     image: 'ApeCoin.png',
-    conversionRate: 0.87,
+    conversionRate: 0.804382,
   },
   {
     value: 'ARB',
