@@ -1,13 +1,14 @@
 import { useAppSelector } from '@/store/hooks';
 import { useSwapStore } from '@/store/hooks/useSwapStore';
 import { SwapStage } from '@/store/reducers/swapReducer';
-import { selectSwapStage } from '@/store/selectors/swap.selectors';
+import { selectSwapStage, selectTheme } from '@/store/selectors/swap.selectors';
 import { useCallback, useEffect, useState } from 'react';
 
 export const useSwap = () => {
-  const { setSwapStage } = useSwapStore();
+  const { setSwapStage, setTheme } = useSwapStore();
 
   const swapStage = useAppSelector(selectSwapStage);
+  const theme = useAppSelector(selectTheme);
 
   const [isMetaMaskVisible, setIsMetaMaskVisible] = useState<boolean>(false);
 
@@ -46,5 +47,7 @@ export const useSwap = () => {
     isMetaMaskVisible,
     onMetaMaskProgress,
     onProgress,
+    setTheme,
+    theme,
   };
 };

@@ -33,7 +33,7 @@ export enum SwapStage {
 export const initialState = {
   cryptoFrom: ethereumCrypto,
   cryptoTo: undefined,
-  theme: ThemeOptions.SIMPLE,
+  theme: ThemeOptions.LIGHT,
   swapStage: SwapStage.WALLET_UNCONECTED,
 } as SwapState;
 

@@ -1,5 +1,6 @@
-- Swap button to move things around
-- Get design looking more amazing
+- Light / Dark Theme
+- MetaMax Right
+- Search crypto
 
 # Introduction
 

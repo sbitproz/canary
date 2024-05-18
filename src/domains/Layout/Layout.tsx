@@ -13,7 +13,7 @@ const items = [
 
 export const Layout = () => {
   return (
-    <BaseLayout>
+    <BaseLayout data-testid="base-layout">
       <Header>
         <Image
           src="canary-white.svg"

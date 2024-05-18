@@ -21,7 +21,7 @@ export const SignSwapTop = styled.div`
   h1,
   h2,
   h3 {
-    color: ${colors.white100};
+    color: ${({ theme }) => theme.brandColors.text100};
   }
   flex-direction: column;
   align-items: center;
@@ -37,10 +37,10 @@ export const SignSwapContent = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 2.5rem;
-
   border: 1px solid ${colors.grey185};
   border-top: 0px;
   border-radius: 0 0 ${spacings.S5}px ${spacings.S5}px;
+  background: ${({ theme }) => theme.brandColors.panelBg100};
 
   && h4 {
     margin-top: 0;

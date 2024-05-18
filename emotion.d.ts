@@ -25,6 +25,11 @@ declare module '@emotion/react' {
       primary190: string;
       primary195: string;
       primary200: string;
+      background100: string;
+      footer100: string;
+      panelBg100: string;
+      text100: string;
+      inverseText100: string;
     };
     theme: GlobalToken;
   }

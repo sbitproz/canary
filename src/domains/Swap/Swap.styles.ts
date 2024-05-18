@@ -37,7 +37,7 @@ export const Tabs = styled(TabsBase)`
   width: 450px;
   div.ant-tabs-tab {
     div.ant-tabs-tab-btn {
-      color: ${colors.black100};
+      color: ${({ theme }) => theme.brandColors.inverseText100};
       font-weight: 600;
     }
   }

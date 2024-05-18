@@ -5,7 +5,7 @@ const { Header: HeaderBase, Footer: FooterBase } = Layout;
 
 export const BaseLayout = styled(Layout)`
   height: 100vh;
-  background: linear-gradient(#ffff, #faecd8);
+  background: ${({ theme }) => theme.brandColors.background100};
 `;
 
 export const Header = styled(HeaderBase)`
@@ -14,7 +14,7 @@ export const Header = styled(HeaderBase)`
 `;
 
 export const Footer = styled(FooterBase)`
-  background: ${({ theme }) => theme.colors.grey100};
+  background: ${({ theme }) => theme.brandColors.footer100};
   color: ${({ theme }) => theme.colors.white100};
   border-bottom: 1px solid ${colors.grey187};
   display: flex;

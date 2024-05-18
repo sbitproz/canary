@@ -60,7 +60,7 @@ export const CryptoSwapForm = () => {
         )}
         {showCryptoToCryptoConversion && (
           <>
-            1 ${cryptoFrom.value} = {cryptoToCryptoConversionRate}
+            1 {cryptoFrom.value} = {cryptoToCryptoConversionRate}{' '}
             {cryptoTo?.value}
           </>
         )}
