@@ -1,7 +1,5 @@
-- Some calculation translation
-- Add some more context sign / confirmation
+- Swap button to move things around
 - Get design looking more amazing
-- Add a little more metamask content
 
 # Introduction
 

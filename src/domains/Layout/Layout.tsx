@@ -1,5 +1,5 @@
 import { Image, Menu } from 'antd';
-import { BaseLayout, Header } from './Layout.styles';
+import { BaseLayout, Footer, Header } from './Layout.styles';
 import { Outlet } from 'react-router-dom';
 import { spacings } from '@/styles/spacings';
 
@@ -29,6 +29,7 @@ export const Layout = () => {
         />
       </Header>
       <Outlet />
+      <Footer>Footer</Footer>
     </BaseLayout>
   );
 };

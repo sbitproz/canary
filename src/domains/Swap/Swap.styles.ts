@@ -29,6 +29,8 @@ export const Content = styled(ContentBase)`
   padding: 50px;
   display: flex;
   justify-content: center;
+  padding-bottom: 5rem;
+  position: relative;
 `;
 
 export const Tabs = styled(TabsBase)`
@@ -44,4 +46,15 @@ export const Tabs = styled(TabsBase)`
     height: 291px;
   }
   margin-top: 3rem;
+`;
+
+export const Background = styled.div`
+  background: url(canary-background4.svg) no-repeat;
+  background-size: auto 85vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -150px;
+  right: 0;
+  min-width: 1000px;
 `;

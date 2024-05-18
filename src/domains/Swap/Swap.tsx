@@ -1,5 +1,5 @@
 import { type TabsProps } from 'antd';
-import { Tabs } from './Swap.styles';
+import { Background, Tabs } from './Swap.styles';
 import { useSwap } from './useSwap';
 import { Content } from './Swap.styles';
 import { ErrorBoundary } from '@components/ErrorBoundary/ErrorBoundary';
@@ -66,6 +66,7 @@ export const Swap = () => {
         onCancel={onCloseMetaMask}
       />
       <Content>
+        <Background data-testid="background" />
         <ErrorBoundary label={userErrorLabel}>
           <Component />
         </ErrorBoundary>
