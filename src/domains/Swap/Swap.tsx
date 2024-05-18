@@ -15,10 +15,6 @@ import { SwapStage } from '@/store/reducers/swapReducer';
 const userErrorLabel = somethingWentWrong('the swap page');
 
 export const Swap = () => {
-  const onChange = (key: string) => {
-    console.log(key);
-  };
-
   const {
     isMetaMaskVisible,
     onMetaMaskProgress,
@@ -54,7 +50,7 @@ export const Swap = () => {
       return <CryptoSubmitted />;
     }
 
-    return <Tabs defaultActiveKey="1" items={items} onChange={onChange} />;
+    return <Tabs defaultActiveKey="1" items={items} />;
   };
 
   return (
