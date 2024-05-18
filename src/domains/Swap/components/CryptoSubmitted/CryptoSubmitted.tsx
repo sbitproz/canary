@@ -1,13 +1,13 @@
 import { Typography } from "antd";
-import { SignSwapActions, TopSub } from "./Submited.styles";
+import { SignSwapActions, TopSub } from "./CryptoSubmitted.styles";
 import { LargeButton } from "@/common/components/Button/Button.styles";
 import { Panel } from "@/common/components/Panel/Panel";
+import { useCryptoSubmitted } from "./useCryptoSubmitted";
 
-interface SubmitProps {
-  onClickProgress: () => void;
-}
+export const CryptoSubmitted = () => {
 
-export const Submit = ({ onClickProgress }: SubmitProps) => {
+  const { onMakeAnotherSwap } = useCryptoSubmitted();
+
   return (
     <Panel
       topSection={<TopSub>Swap Complete</TopSub>}
@@ -20,7 +20,7 @@ export const Submit = ({ onClickProgress }: SubmitProps) => {
             </Typography.Title>
           </div>
           <SignSwapActions>
-            <LargeButton type="primary" onClick={onClickProgress}>
+            <LargeButton type="primary" onClick={onMakeAnotherSwap}>
               Make another Swap
             </LargeButton>
           </SignSwapActions>

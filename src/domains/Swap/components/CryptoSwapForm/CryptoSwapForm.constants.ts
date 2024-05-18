@@ -1,4 +1,4 @@
-import { SwapStage } from "../../useSwap";
+import { SwapStage } from "@/store/reducers/swapReducer";
 
 export const cryptoFormButton: Record<string, string> = {
   [SwapStage.WALLET_UNCONECTED]: "Connect Wallet",

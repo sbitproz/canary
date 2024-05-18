@@ -1,19 +1,9 @@
+import { useSwapStore } from "@/store/hooks/useSwapStore";
+import { SwapStage } from "@/store/reducers/swapReducer";
 import { useCallback, useEffect, useState } from "react";
 
-export enum SwapStage {
-  WALLET_UNCONECTED,
-  WALLET_CONNECT,
-  CONFIRM_SWAP,
-  SIGN_SWAP,
-  SIGNING_SWAP,
-  SUBMITTING_SWAP,
-  COMPLETE_SWAP,
-}
-
 export const useSwap = () => {
-  const [swapStage, setSwapStage] = useState<SwapStage>(
-    SwapStage.WALLET_UNCONECTED
-  );
+  const { swapStage, setSwapStage } = useSwapStore();
 
   const [isMetaMaskVisible, setIsMetaMaskVisible] = useState<boolean>(false);
 
@@ -43,8 +33,6 @@ export const useSwap = () => {
     if (swapStage === SwapStage.SIGNING_SWAP) {
       setIsMetaMaskVisible(true);
     }
-
-    console.log("🚀 ~ useEffect ~ swapStage:", swapStage);
   }, [swapStage]);
 
   return {

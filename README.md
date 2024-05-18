@@ -1,3 +1,9 @@
+- Add redux or context api
+- Get design looking more amazing
+- Add a little more metamask content
+- Some calculation translation
+- Add some more context sign / confirmation
+
 # Introduction
 
 Hi :)

@@ -23,6 +23,7 @@ export default ({}) => {
         "@common": path.resolve(__dirname, "./src/common"),
         "@utils": path.resolve(__dirname, "./src/common/utils"),
         "@styles": path.resolve(__dirname, "./src/common/styles"),
+        "@theme": path.resolve(__dirname, "./src/theme"),
         "@hooks": path.resolve(__dirname, "./src/common/hooks"),
         "@components": path.resolve(__dirname, "./src/common/components"),
       },

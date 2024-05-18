@@ -11,19 +11,19 @@ import { useCallback, useState } from "react";
 
 interface CryptoSelectorProps {
   label: string;
-  selectedCurrency: CryptoCurrency;
+  selectedCurrency?: CryptoCurrency;
   onSelectedCurrency: (crypt: CryptoCurrency) => void;
 }
 
 export const CryptoSelector = ({
   label,
+  onSelectedCurrency,
+  selectedCurrency,
 }: CryptoSelectorProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const [selectedCrypto, setSelectedCrypto] = useState<CryptoCurrency>();
-
   const onSelectCryptoCurrency = useCallback((crypto: CryptoCurrency) => {
-    setSelectedCrypto(crypto);
+    onSelectedCurrency(crypto);
     setIsOpen(false);
   }, []);
 
@@ -44,7 +44,7 @@ export const CryptoSelector = ({
       >
         <InputNumber placeholder="0" controls={false} />{" "}
         <CryptoButton
-          selectedCurrency={selectedCrypto}
+          selectedCurrency={selectedCurrency}
           onSelectedCurrency={() => setIsOpen(true)}
         />
       </div>

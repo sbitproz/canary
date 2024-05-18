@@ -32,6 +32,7 @@
       "@layouts/*": ["./src/layouts/*"],
       "@utils/*": ["./src/common/utils/*"],
       "@styles/*": ["./src/common/styles/*"],
+      "@theme/*": ["./src/theme/*"],
       "@hooks/*": ["./src/common/hooks/*"],
       "@components/*": ["./src/common/components/*"]
     }

@@ -1,4 +1,4 @@
-import { SwapStage } from "./useSwap";
+import { SwapStage } from "@/store/reducers/swapReducer";
 
 export const metaMaskProps: Record<string, any> = {
   [SwapStage.WALLET_CONNECT]: {
