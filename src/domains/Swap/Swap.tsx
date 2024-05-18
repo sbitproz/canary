@@ -9,6 +9,7 @@ import { ComingSoon } from "@/common/components/ComingSoon/ComingSoon";
 import { MetaMaskModal } from "@/common/components/MetaMaskModal/MetaMaskModal";
 import { metaMaskProps } from "./Swap.constants";
 import { SignSwap } from "./components/SignSwap/SignSwap";
+import { Submit } from "./components/Submitting/Submited";
 
 const userErrorLabel = somethingWentWrong("the swap page");
 
@@ -22,7 +23,11 @@ const SwapStageContainer = ({
   onSwapStage,
 }: SwapStageContainerProps) => {
   if (
-    [SwapStage.WALLET_UNCONECTED, SwapStage.WALLET_CONNECT].includes(swapStage)
+    [
+      SwapStage.WALLET_UNCONECTED,
+      SwapStage.WALLET_CONNECT,
+      SwapStage.CONFIRM_SWAP,
+    ].includes(swapStage)
   ) {
     return <CryptoSwapForm onSwapStage={onSwapStage} swapStage={swapStage} />;
   }
@@ -63,15 +68,14 @@ export const Swap = () => {
   ];
 
   const Component = () => {
-    if (
-      [
-        SwapStage.CONFIRM_SWAP,
-        SwapStage.SIGN_SWAP,
-        SwapStage.SIGNING_SWAP,
-      ].includes(swapStage)
-    ) {
+    if ([SwapStage.SIGN_SWAP, SwapStage.SIGNING_SWAP].includes(swapStage)) {
       return <SignSwap onClickSign={onProgress} />;
     }
+
+    if ([SwapStage.SUBMITTING_SWAP].includes(swapStage)) {
+      return <Submit onClickProgress={() => setSwapStage(0)} />;
+    }
+
     return <Tabs defaultActiveKey="1" items={items} onChange={onChange} />;
   };
 

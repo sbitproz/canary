@@ -45,5 +45,3 @@ export const Tabs = styled(TabsBase)`
   }
   margin-top: 3rem;
 `;
-
-// <div role="tab" aria-selected="true" class="ant-tabs-tab-btn" tabindex="0" id="rc-tabs-5-tab-1" aria-controls="rc-tabs-5-panel-1">Tab 1</div>

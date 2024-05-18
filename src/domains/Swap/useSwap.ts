@@ -33,14 +33,14 @@ export const useSwap = () => {
       setSwapStage(swapStage - 1);
     }
     setIsMetaMaskVisible(false);
-  }, []);
+  }, [swapStage]);
 
   useEffect(() => {
     if (swapStage === SwapStage.WALLET_CONNECT) {
       setIsMetaMaskVisible(true);
     }
 
-    if (swapStage === SwapStage.SIGN_SWAP) {
+    if (swapStage === SwapStage.SIGNING_SWAP) {
       setIsMetaMaskVisible(true);
     }
 
