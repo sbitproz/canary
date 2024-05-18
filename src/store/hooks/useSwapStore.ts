@@ -3,6 +3,7 @@ import { useCallback } from "react";
 import { ThemeOptions } from "@/theme/theme.constants";
 import { CryptoCurrency } from "@/common/constants/cryptos";
 import {
+  resetCryptoAction,
   setFromCryptoAction,
   setSwapStageAction,
   setSwapThemeAction,
@@ -52,7 +53,7 @@ export const useSwapStore = () => {
   }, [dispatch]);
 
   const resetCrypto = useCallback(() => {
-    dispatch(setSwapStageAction(swap.swapStage - 1));
+    dispatch(resetCryptoAction());
   }, [dispatch]);
 
   return {

@@ -5,8 +5,8 @@ export const useCryptoSubmitted = () => {
   const { setSwapStage, resetCrypto } = useSwapStore();
 
   const onMakeAnotherSwap = useCallback(() => {
-    setSwapStage(0);
     resetCrypto();
+    setSwapStage(0);
   }, [resetCrypto, setSwapStage]);
 
   return {
