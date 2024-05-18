@@ -8,7 +8,7 @@ export const ComingSoonContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: ${colors.grey185};
+  color: ${colors.grey150};
   font-weight: 500;
   font-size: 16px;
 `;

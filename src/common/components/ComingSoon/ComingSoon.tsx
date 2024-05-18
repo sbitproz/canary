@@ -5,7 +5,7 @@ export const ComingSoon = () => {
   return (
     <ComingSoonContainer>
       <Image
-        src="canary.svg"
+        src="canary2.svg"
         alt="Coming soon"
         preview={false}
         width={100}

@@ -24,6 +24,8 @@ export const CryptoSwapForm = () => {
     setFromCryptoCurrency,
     setCryptoToValue,
     setToCryptoCurrency,
+    showCryptoToCryptoConversion,
+    cryptoToCryptoConversionRate,
   } = useCryptoSwapForm();
 
   const onProgress = useCallback(() => {
@@ -51,7 +53,17 @@ export const CryptoSwapForm = () => {
         {cryptoFormButton[swapStage]}
       </LargeButton>
       <SwapUSDConversion>
-        1 USDC = {cryptoFrom?.conversionRate} ${cryptoFrom?.value} ($1.00)
+        {!showCryptoToCryptoConversion && (
+          <>
+            1 USDC = {cryptoFrom?.conversionRate} {cryptoFrom.value} ($1.00)
+          </>
+        )}
+        {showCryptoToCryptoConversion && (
+          <>
+            1 ${cryptoFrom.value} = {cryptoToCryptoConversionRate}
+            {cryptoTo?.value}
+          </>
+        )}
       </SwapUSDConversion>
     </SwapFormContainer>
   );

@@ -30,6 +30,18 @@ export const useCryptoSwapForm = () => {
     return undefined;
   }, [cryptoFrom.conversionRate, cryptoFromValue, cryptoTo]);
 
+  const showCryptoToCryptoConversion = useMemo(() => {
+    return cryptoFrom && cryptoTo && cryptoFromValue && cryptoToValue;
+  }, [cryptoFrom, cryptoFromValue, cryptoTo, cryptoToValue]);
+
+  const cryptoToCryptoConversionRate = useMemo(() => {
+    if (showCryptoToCryptoConversion && cryptoFromValue && cryptoToValue) {
+      return cryptoToValue / cryptoFromValue;
+    }
+
+    return undefined;
+  }, [cryptoFromValue, cryptoToValue, showCryptoToCryptoConversion]);
+
   const onChangeFromValue = useCallback(
     (value: number | null) => {
       setCryptoFromValue(value);
@@ -73,5 +85,7 @@ export const useCryptoSwapForm = () => {
     setFromCryptoCurrency,
     setCryptoToValue,
     setToCryptoCurrency,
+    showCryptoToCryptoConversion,
+    cryptoToCryptoConversionRate,
   };
 };
