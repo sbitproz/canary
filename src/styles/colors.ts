@@ -42,10 +42,10 @@ export const funColors: BrandColors = {
 };
 
 export const simpleColors: BrandColors = {
-  primary50: '#072374',
-  primary100: '#0039DB',
-  primary120: '#5C86FF',
-  primary140: '#CDDAFF',
+  primary50: '#FFBC00',
+  primary100: '#FFBC00',
+  primary120: '#FFBC00',
+  primary140: '#FFEDBB',
   primary190: '#f5f8fd',
   primary195: '#E9EFFF',
   primary200: '#092B00',

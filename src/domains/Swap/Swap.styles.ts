@@ -38,6 +38,7 @@ export const Tabs = styled(TabsBase)`
   div.ant-tabs-tab {
     div.ant-tabs-tab-btn {
       color: ${colors.black100};
+      font-weight: 600;
     }
   }
 

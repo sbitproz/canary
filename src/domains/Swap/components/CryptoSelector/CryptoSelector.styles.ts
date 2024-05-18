@@ -6,7 +6,8 @@ import { InputNumber as InputNumberBase } from 'antd';
 export const InputLabel = styled.div`
   font-weight: 400;
   line-height: 20px;
-  color: ${colors.grey180};
+  color: ${colors.grey130};
+  font-weight: 500;
   margin-bottom: ${spacings.S5};
 `;
 
@@ -36,7 +37,7 @@ export const InputNumber = styled(InputNumberBase)`
 export const CryptoSelectorContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background: ${colors.grey190};
+  background: ${({ theme }) => theme.brandColors.primary140};
   border-radius: ${spacings.S7}px;
   padding: ${spacings.S7}px;
   max-width: 100%;
@@ -47,7 +48,8 @@ export const ConversionLabel = styled.div`
   font-weight: 400;
   height: 15px;
   line-height: 14px;
-  color: ${colors.grey180};
+  color: ${colors.grey130};
+  font-weight: 500;
 `;
 
 export const InputButtonContainer = styled.div`

@@ -5,6 +5,7 @@ const { Header: HeaderBase, Footer: FooterBase } = Layout;
 
 export const BaseLayout = styled(Layout)`
   height: 100vh;
+  background: linear-gradient(#ffff, #faecd8);
 `;
 
 export const Header = styled(HeaderBase)`
