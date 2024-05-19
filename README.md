@@ -21,9 +21,17 @@ No testing has been included due to the time limitation.
 - Canary protocol branding 
 - Centralised state management
 
-## Requirements:
+## Prototype Steps:
 
-- 
+- Enter crpyto values
+- Connect to wallet
+- Metamask connect
+- Confirm swap
+- Sign swap order
+- Metamask sign
+- Make another swap
+
+## Requirements:
 
 # Starting up project
 
