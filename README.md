@@ -1,13 +1,12 @@
-- MetaMax Right
-- Toasts
-
 # Introduction
 
 Hi :)
 
-This react project utilises AntD UI for the 'UI' and axios for consuming APIs. The project attempts at delivering reasonably comprehensive test coverage in the feature domain area.
+This react project presents a simulation of a crypto swap platform similar to of uniswap, cowswap and 1inch.  The tech stack includes Antd, redux, emotion.
 
 Naturally there's room for improvement all round :). This project isn't complete :(
+
+No testing has been included due to the time limitation.
 
 ## Requirements:
 
