@@ -9,12 +9,17 @@ import {
   setToCryptoAction,
   setToValueAction,
   setFromValueAction,
+  switchCryptoAction,
 } from '../actions/swapActions';
 import { useAppDispatch } from '../hooks';
 import { SwapStage } from '../reducers/swapReducer';
 
 export const useSwapStore = () => {
   const dispatch = useAppDispatch();
+
+  const switchCryptoFromAndTo = useCallback(() => {
+    dispatch(switchCryptoAction());
+  }, [dispatch]);
 
   const setTheme = useCallback(
     (option: ThemeOptions) => {
@@ -70,5 +75,6 @@ export const useSwapStore = () => {
     setFromCryptoCurrency,
     setSwapStage,
     resetCrypto,
+    switchCryptoFromAndTo,
   };
 };

@@ -1,6 +1,4 @@
-- Light / Dark Theme
 - MetaMax Right
-- Search crypto
 
 # Introduction
 

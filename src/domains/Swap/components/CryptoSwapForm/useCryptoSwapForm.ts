@@ -18,7 +18,15 @@ export const useCryptoSwapForm = () => {
     setFromCryptoCurrency,
     setCryptoToValue,
     setToCryptoCurrency,
+    switchCryptoFromAndTo,
   } = useSwapStore();
+
+  const switchCrypto = useCallback(() => {
+    if (cryptoToValue) {
+      setCryptoFromValue(cryptoToValue);
+    }
+    switchCryptoFromAndTo();
+  }, [cryptoToValue, setCryptoFromValue, switchCryptoFromAndTo]);
 
   const conversionFromRate = useMemo(() => {
     const usd = (cryptoFromValue ?? 0) / cryptoFrom.conversionRate;
@@ -87,5 +95,6 @@ export const useCryptoSwapForm = () => {
     setToCryptoCurrency,
     showCryptoToCryptoConversion,
     cryptoToCryptoConversionRate,
+    switchCrypto,
   };
 };

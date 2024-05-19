@@ -9,6 +9,7 @@ import {
   setSwapThemeAction,
   setToCryptoAction,
   setToValueAction,
+  switchCryptoAction,
 } from '../actions/swapActions';
 
 export interface SwapState {
@@ -56,6 +57,19 @@ const swapReducer = createReducer(initialState, (builder) => {
   builder.addCase(setSwapStageAction, (state: SwapState, action) => {
     state.swapStage = action.payload;
   });
+  builder.addCase(switchCryptoAction, (state: SwapState) => {
+    const cryptoTo = JSON.parse(JSON.stringify(state.cryptoTo));
+    const valueTo = state.cryptoFromValue;
+
+    const cryptoFrom = JSON.parse(JSON.stringify(state.cryptoFrom));
+
+    if (state.cryptoTo && state.cryptoFrom) {
+      state.cryptoFrom = cryptoTo;
+      state.cryptoFromValue = valueTo;
+      state.cryptoTo = cryptoFrom;
+    }
+  });
+
   builder.addCase(resetCryptoAction, (state: SwapState) => {
     state.cryptoFrom = ethereumCrypto;
     state.cryptoTo = undefined;

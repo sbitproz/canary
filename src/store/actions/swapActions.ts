@@ -23,3 +23,5 @@ export const setFromValueAction = createAction<SwapState['cryptoFromValue']>(
 export const setToValueAction = createAction<SwapState['cryptoToValue']>(
   'crpyot/set to value',
 );
+
+export const switchCryptoAction = createAction('crpyot/switch crypto');

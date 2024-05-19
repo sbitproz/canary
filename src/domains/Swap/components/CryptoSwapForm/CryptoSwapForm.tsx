@@ -1,5 +1,9 @@
 import { CryptoSelector } from '../CryptoSelector/CryptoSelector';
-import { SwapFormContainer, SwapUSDConversion } from './CryptoSwapForm.styles';
+import {
+  SwapFormContainer,
+  SwapUSDConversion,
+  SwitchButton,
+} from './CryptoSwapForm.styles';
 import {
   cryptoFormButton,
   cryptoFormButtonProgress,
@@ -7,6 +11,8 @@ import {
 import { useCallback } from 'react';
 import { LargeButton } from '@/common/components/Button/Button.styles';
 import { useCryptoSwapForm } from './useCryptoSwapForm';
+import { Button } from 'antd';
+import { SwapOutlined } from '@ant-design/icons';
 
 const fromLabel = 'You pay';
 const toLabel = 'You receive';
@@ -26,6 +32,7 @@ export const CryptoSwapForm = () => {
     setToCryptoCurrency,
     showCryptoToCryptoConversion,
     cryptoToCryptoConversionRate,
+    switchCrypto,
   } = useCryptoSwapForm();
 
   const onProgress = useCallback(() => {
@@ -34,6 +41,9 @@ export const CryptoSwapForm = () => {
 
   return (
     <SwapFormContainer>
+      <SwitchButton type="primary" onClick={switchCrypto}>
+        <SwapOutlined rotate={90} />
+      </SwitchButton>
       <CryptoSelector
         onSetValue={onChangeFromValue}
         value={cryptoFromValue}
@@ -49,6 +59,7 @@ export const CryptoSwapForm = () => {
         selectedCurrency={cryptoTo}
         onSelectedCurrency={setToCryptoCurrency}
       />
+
       <LargeButton disabled={disableButton} type="primary" onClick={onProgress}>
         {cryptoFormButton[swapStage]}
       </LargeButton>
