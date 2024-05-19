@@ -1,4 +1,5 @@
 - MetaMax Right
+- Toasts
 
 # Introduction
 

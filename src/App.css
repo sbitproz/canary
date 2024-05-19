@@ -22,3 +22,8 @@
   font-weight: 500;
   border-bottom: 3px solid #ffffff;
 }
+
+div.ant-modal-content {
+  width: 300px !important;
+  right: -60px !important;
+}
