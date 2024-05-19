@@ -1,4 +1,4 @@
-import { Image, Menu } from 'antd';
+import { Image, Menu, MenuProps } from 'antd';
 import { BaseLayout, Footer, Header, Switch } from './Layout.styles';
 import { Outlet } from 'react-router-dom';
 import { spacings } from '@/styles/spacings';
@@ -9,7 +9,9 @@ import { useAppSelector } from '@/store/hooks';
 import { selectTheme } from '@/store/selectors/swap.selectors';
 import { ThemeOptions } from '@/theme/theme.constants';
 
-const items = [
+type MenuItem = Required<MenuProps>['items'][number];
+
+const items: MenuItem[] = [
   { label: 'Swap', key: '1' },
   { label: 'Explore', key: '2' },
   { label: 'FAQ', key: '3' },
