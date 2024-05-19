@@ -16,8 +16,6 @@ const items = [
   },
 ];
 
-const signSwapButtonLabel = 'Sign swap order';
-
 interface SignSwapProps {
   onClickSign: () => void;
 }
@@ -51,7 +49,7 @@ export const SignSwap = ({ onClickSign }: SignSwapProps) => {
           <SignSwapSteps current={1} labelPlacement="vertical" items={items} />
           <SignSwapActions>
             <LargeButton type="primary" onClick={onClickSign}>
-              {signSwapButtonLabel}
+              Sign swap order
             </LargeButton>
           </SignSwapActions>
         </>
