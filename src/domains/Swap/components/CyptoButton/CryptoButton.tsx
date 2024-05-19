@@ -5,6 +5,7 @@ import {
   CryptoButtonContainer,
   CryptoValue,
   DownArrowIcon,
+  SelectButton,
 } from './CryptoButton.styles';
 
 interface CryptoButtonProps {
@@ -18,16 +19,12 @@ export const CryptoButton = ({
 }: CryptoButtonProps) => {
   if (!selectedCurrency) {
     return (
-      <Button
+      <SelectButton
         onClick={onSelectedCurrency}
         type="primary"
-        style={{
-          borderRadius: 20,
-          fontWeight: 500,
-        }}
       >
         Select
-      </Button>
+      </SelectButton>
     );
   }
 

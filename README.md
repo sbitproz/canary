@@ -12,6 +12,15 @@ Naturally there's room for improvement all round :). This project isn't complete
 
 No testing has been included due to the time limitation.
 
+## Features:
+
+- Light / Dark theme
+- Swap workflow
+- Uniflow conversion
+- Swap button
+- Canary protocol branding 
+- Centralised state management
+
 ## Requirements:
 
 - 
@@ -24,15 +33,6 @@ Install the project dependencies
 
 ```
 yarn
-```
-
-## Create an .env file
-
-Create an .env file in the root of the project.  Copy the contents from .env.defaults into the .env file or use the below configurations
-
-```
-VITE_BASEURL=http://localhost:3000/results
-NOTIFICATION_DURATION=10
 ```
 
 ## Start the React app

@@ -28,3 +28,8 @@ export const DownArrowIcon = styled(DownOutlined)`
   right: 8px;
   top: 12px;
 `;
+
+export const SelectButton = styled(Button)`
+  border-radius: 20px;
+  font-weight: 500;
+`;
