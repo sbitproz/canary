@@ -11,7 +11,6 @@ import {
 import { useCallback } from 'react';
 import { LargeButton } from '@/common/components/Button/Button.styles';
 import { useCryptoSwapForm } from './useCryptoSwapForm';
-import { Button } from 'antd';
 import { SwapOutlined } from '@ant-design/icons';
 
 const fromLabel = 'You pay';
