@@ -63,7 +63,7 @@ export const lightColors: BrandColors = {
   primary200: '#092B00',
   background100: 'linear-gradient(#ffffff, #faecd8)',
   footer100: colors.grey100,
-  panelBg100: 'none',
+  panelBg100: '#ffffff87',
   text100: colors.white100,
   inverseText100: colors.black100,
   disabled100: '#d9d9d9',

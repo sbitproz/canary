@@ -4,6 +4,10 @@ Hi :)
 
 This react project presents a simulation of a crypto swap platform similar to of uniswap, cowswap and 1inch.  The tech stack includes Antd, redux, emotion.
 
+A Metamask modal has been added to give an idea of the Metamask step required during crypto swap process.
+
+The project includes a light and dark theme and is branded as the Canary Protocol.
+
 Naturally there's room for improvement all round :). This project isn't complete :(
 
 No testing has been included due to the time limitation.
